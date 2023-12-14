@@ -9,6 +9,8 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/style_carrousel.css" />
+    <link rel="stylesheet" href="src/css/style_galerie.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js">
     <link rel="icon" href="public/icons/Logo.ico" />
 
 </head>
@@ -105,9 +107,27 @@
     président de l'Université Yale Kingman Brewster et le chef de la police de New Haven James Ahern ont soutenu que des
     partisans pro ou anti-Black Panthers auraient pu, les uns comme les autres, installer les dispositifs.</h4>
 
+    <div x-data="{
+        imageAffiche: 'public/img/int.webp'
+    }">
     
-
-
+        <h1>Galerie de l'intérieur et de l'extérieur</h1>
+        
+        <div x-data="{
+        imageAffiche: 'public/img/int1.webp'
+        }">
+ 
+        <div class="overlay" x-show="imageAffiche" x-transition.duration.800ms @click="imageAffiche = null"
+            @keyup.escape.window="imageAffiche = null">
+            <figure><img :src="imageAffiche">
+        
+            </figure>
+        </div>
+        
+        <img src="public/img/int1.webp" alt=""style="width: 100px;"
+            @click="imageAffiche = 'public/img/int1.webp'">
+        <img src="public/img/ext.webp" alt="" style="width: 100px;"
+            @click="imageAffiche = 'public/img/ext.webp'"></div>
 
     <footer class="footer">
         <a href="/">

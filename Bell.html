@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen,}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frise d'oeuvres</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style_carrousel.css" />
+    <link rel="icon" href="public/icons/Logo.ico" />
+
+</head>
+
+<body x-data="{ menuIsOpen: false }">
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header_menuBtn">
+        menu
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+
+        <ul>
+            <li>
+                <a href="presentation.html">Qui est Eero Saarinen ?</a>
+            </li>
+            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
+            <li><a href="ticket.html">Réserve ton billet</a></li>
+            <li><a href="contact.html">Contactez nous</a></li>
+        </ul>
+    </nav>
+    <header class="header header--home">
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+        </a>
+
+        <h1 class="header__title header__title--home">Fondation Cartier</h1>
+
+
+        <p class="header__intro">
+        <h1>Bell Labs Holmdel Complex, Holmdel</h1>
+        </p>
+    </header>
+
+
+
+    <div class="carrousel" x-show="!menuIsOpen" x-data="{hrefCourant: '#ecran-1'}">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">&lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant =
+                '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-10.webp" alt="image ecran 1">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-20.webp" alt="image ecran 2">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-21.webp" alt="image ecran 3">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+
+            </figure>
+        </div>
+    </div>
+    </div>
+
+    <h3>Le Bell Labs Holmdel Complex est un ancien campus des Laboratoires Bell situé à Holmdel, dans le New Jersey. Conçu par
+    l'architecte Eero Saarinen et construit entre 1959 et 1962, il a servi pendant 44 ans pour près de 6 000 ingénieurs.</h3>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.974413677735!2d-74.17232791667186!3d40.365091685176836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2325e2f0bce61%3A0xd20f261c8417a81a!2sBell%20Labs%20Holmdel%20Complex%2C%20101%20Crawfords%20Corner%20Rd%2C%20Holmdel%2C%20NJ%2007733%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1702585088181!5m2!1sfr!2sfr"
+        width="375" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h1>Architecture</h1>
+    <h2>Un extérieur cylindrique
+    </h2>
+
+    <h4>De l'extérieur, la chapelle est un simple cylindre de brique sans fenêtre, placé à l'intérieur d'un fossé de
+        béton très
+        peu profond. Le bâtiment mesure 50 pieds (15,24 m) de diamètre et 30 pieds (9,144 m) de hauteur. Il surmonté
+        d'une
+        flèche en aluminium. Le mur circulaire en brique est soutenu par une série de voûtes basses1. Saarinen a choisi
+        des
+        briques rugueuses et imparfaites pour créer un effet texturé.</h4>
+
+    <h2>Un intérieur intime</h2>
+
+    <h4>À l'intérieur se trouve un espace intime. Les murs intérieurs suivent une forme ondulante. Comme une cascade de
+        lumière,
+        une sculpture en métal signée Harry Bertoia scintille depuis un puits de lumière circulaire jusqu'au petit autel
+        en
+        marbre.</h4>
+
+    <h1>Restauration</h1>
+    <h4>Au cours de l'été 2014, le MIT entreprend la première rénovation complète de la chapelle depuis sa construction
+        initiale. Les douves sont reconstruites pour réparer les fuites et permettre de les remplir avec de l'eau
+        recyclée et
+        filtrée. L'enveloppe extérieure du bâtiment est réparée. Des travaux de restauration interne et d'amélioration
+        des
+        systèmes mécaniques sont effectués. La chapelle rouvre en 2015.</h4>
+
+
+
+    <footer class="footer">
+        <a href="/">
+            <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
+        </a>
+        <p class="footer__text">
+        <h2>Contact</h2>
+        <h3>Alban Chatelet - Groupe C1</h3>
+        <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
+        </p>
+        <p class="footer__copy">&copy; Fondation Cartier</p>
+    </footer>
+</body>

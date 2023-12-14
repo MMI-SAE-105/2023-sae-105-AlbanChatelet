@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen,}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de contact</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    
+</head>
+<body>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
+        menu
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <ul>
+            <li>
+                <a href="presentation.html">Qui est Eero Saarinen ?</a>
+            </li>
+            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
+            <li><a href="ticket.html">Réserve ton billet</a></li>
+            <li><a href="contact.html">Contactez nous</a></li>
+        </ul>
+    </nav>
+    <header class="header header--home">
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+        </a>
+    
+        <h1 class="header__title header__title--home">Fondation Cartier</h1>
+    
+    
+        <p class="header__intro">
+        <h1>Formulaire de contact</h1>
+        </p>
+    </header>
+
+    <h3>Si vous vous posez des questions par rapport au site où si il y a une erreur dedans, n’hésitez pas à faire un retour !</h3>
+
+    <main class="container">
+        
+        <form action="#">
+            <div>
+                <label class="contactform-label" for="name">Prénom</label>
+                <input class="contactform-input" type="text" name="firstname" id="firstname"
+                    placeholder="Entrer votre prénom">
+            </div>
+            <div>
+                <label class="contactform-label" for="name">Nom</label>
+                <input class="contactform-input" type="text" name="name" id="name" placeholder="Entrer votre nom">
+            </div>
+            <div>
+                <label class="contactform-label" for="email">Email</label>
+                <input class="contactform-input" type="email" name="email" id="email" placeholder="Entrer votre e-mail">
+            </div>
+            <div>
+                <label class="contactform-label" for="message">Message</label>
+                <textarea class="contactform-input" id="message" name="message" rows="8"
+                    placeholder="Entrer votre message"></textarea>
+            </div>
+            <button class="contact__form-button uppercase" type="submit">Envoyer</button>
+        </form>
+    </main>
+
+
+
+    <footer class="footer">
+        <a href="/">
+            <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
+        </a>
+        <p class="footer__text">
+        <h2>Contact</h2>
+        <h3>Alban Chatelet - Groupe C1</h3>
+        <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
+        </p>
+        <p class="footer__copy">&copy; Fondation Cartier</p>
+    </footer>
+</body>

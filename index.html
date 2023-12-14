@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen,}">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,14 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Fondation Cartier</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
 
     <link rel="stylesheet" href="src/css/style.css" />
 
     <link rel="icon" href="public/icons/Logo.ico" />
+
+    
 </head>
 
 <body>
+    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
+        menu
+    </button>
+    
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <ul>
+            <li>
+                <a href="presentation.html">Qui est Eero Saarinen ?</a>
+            </li>
+            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
+            <li><a href="ticket.html">Réserve ton billet</a></li>
+            <li><a href="contact.html">Contactez nous</a></li>
+        </ul>
+    </nav>
     <header class="header header--home">
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
@@ -24,11 +40,8 @@
         
         <img src="public/img/image-14.webp" alt="">
         <p class="header__intro">
-            Eero Saarinen, et l'art de faire évoluer l'architecture
+            <h1>Eero Saarinen, et l'art de faire évoluer l'architecture</h1>
         </p>
-        <button class="header__menu-btn menu-btn">Menu
-            <span class="menu-btn__bar"></span>
-        </button>           
     </header>
 
     <main>
@@ -36,7 +49,7 @@
             <header class="section__header intro">
                 <h2 class="intro__title">Du 13 avril au 23 juin 2024</h2>
                 <p class="intro__text">
-                    Fondation Cartier, 261 Bd Raspail, 75014 Paris
+                    <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
                 </p>
             </header>
         </section>
@@ -48,18 +61,18 @@
     </div>
 
     <img src="public/img/image-1.webp" alt="">
-    <legend>Aperçu de l'exposition</legend>
+    <legend><h4>Aperçu de l'exposition</h4></legend>
 
     <div>
         <img src="public/icons/paysage.svg" alt="Icone de photo" />
-        <h2 class="">Voir les oeuvres de Eero Saarinen</h2>
+        <h3>Voir les oeuvres de Eero Saarinen</h3>
     </div>
 
     <h1>Qui est Eero Saarinen ?</h1>
     <img src="public/img/image-2.webp" alt="">
 
     <div>
-        <h2 class="">En savoir plus</h2>
+        <h3 class="">En savoir plus</h3>
     </div>
     <section>
     <h1>Lieu & horaires</h1>
@@ -103,5 +116,17 @@
             </ul>
         </ul>
     </section>
+
+    <footer class="footer">
+        <a href="/">
+            <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
+        </a>
+        <p class="footer__text">
+        <h2>Contact</h2>
+        <h3>Alban Chatelet - Groupe C1</h3>
+        <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
+        </p>
+        <p class="footer__copy">&copy; Fondation Cartier</p>
+    </footer>
 </body>
 

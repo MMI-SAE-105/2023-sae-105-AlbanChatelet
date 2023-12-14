@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
+    
+    <header class="header header--home">
+        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
         menu
     </button>
     
@@ -31,7 +33,6 @@
             <li><a href="contact.html">Contactez nous</a></li>
         </ul>
     </nav>
-    <header class="header header--home">
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
         </a>
@@ -57,7 +58,7 @@
 
     <div>
         <img src="public/icons/Ticket.svg" alt="Icone de ticket" />   
-        <h2 class="">Réserver dès maintenant</h2>
+        <h2><a href="ticket.html">Réserver dès maintenant</a></h2>
     </div>
 
     <img src="public/img/image-1.webp" alt="">
@@ -65,14 +66,14 @@
 
     <div>
         <img src="public/icons/paysage.svg" alt="Icone de photo" />
-        <h3>Voir les oeuvres de Eero Saarinen</h3>
+        <h3><a href="frise.html">Voir les oeuvres de Eero Saarinen</a></h3>
     </div>
 
     <h1>Qui est Eero Saarinen ?</h1>
     <img src="public/img/image-2.webp" alt="">
 
     <div>
-        <h3 class="">En savoir plus</h3>
+        <h3><a href="presentation.html">En savoir plus</a></h3>
     </div>
     <section>
     <h1>Lieu & horaires</h1>
@@ -122,7 +123,7 @@
             <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
         </a>
         <p class="footer__text">
-        <h2>Contact</h2>
+        <h2><a href="contact.html">Contact</a></h2>
         <h3>Alban Chatelet - Groupe C1</h3>
         <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
         </p>

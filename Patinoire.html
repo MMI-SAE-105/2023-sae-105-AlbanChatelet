@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen,}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frise d'oeuvres</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style_carrousel.css" />
+    <link rel="icon" href="public/icons/Logo.ico" />
+
+</head>
+
+<body x-data="{ menuIsOpen: false }">
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header_menuBtn">
+        menu
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+
+        <ul>
+            <li>
+                <a href="presentation.html">Qui est Eero Saarinen ?</a>
+            </li>
+            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
+            <li><a href="ticket.html">Réserve ton billet</a></li>
+            <li><a href="contact.html">Contactez nous</a></li>
+        </ul>
+    </nav>
+    <header class="header header--home">
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+        </a>
+
+        <h1 class="header__title header__title--home">Fondation Cartier</h1>
+
+
+        <p class="header__intro">
+        <h1>Patinoire David S. Ingalls, université Yale</h1>
+        </p>
+    </header>
+
+
+
+    <div class="carrousel" x-show="!menuIsOpen" x-data="{hrefCourant: '#ecran-1'}">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">&lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant =
+                '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-6.webp" alt="image ecran 1">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-23.webp" alt="image ecran 2">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-22.webp" alt="image ecran 3">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+
+            </figure>
+        </div>
+    </div>
+    </div>
+
+    <h3>La patinoire David S. Ingalls est une patinoire de hockey située sur le campus de l’université Yale à New Haven dans le
+    Connecticut aux États-Unis. Elle est construite entre 1953 et 1958 par l'architecte Eero Saarinen. La patinoire est la
+    résidence de l’équipe universitaire de hockey des Bulldogs de Yale.</h3>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.6354946245215!2d-72.92759052442561!3d41.31679260037182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9b7e520e697%3A0xa40b4f5a8c178afb!2sIngalls%20Ice%20Rink!5e0!3m2!1sfr!2sfr!4v1702582183537!5m2!1sfr!2sfr"
+        width="375" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <h1>Histoire</h1>
+    <h2>Construction
+    </h2>
+
+    <h4>En 1953 l’architecte Eero Saarinen, ancien étudiant de l’université Yale est chargé de concevoir la patinoire de
+    l’équipe universitaire de hockey sur glace, les Bulldogs de Yale. Saarinen crée une arche caténaire en béton armé de 90
+    mètres. Les câbles partent de chaque côtés de cette épine dorsale et terminent leur course arrimés aux deux murs
+    latéraux. Ce réseau de filins supporte une ferme en bois créant un toit dynamique à double courbure. Selon son associé
+    Kevin Roche : « La grande leçon à tirer de cet exemple est la maitrise des lignes et des formes qu’Eero possédait ».
+    Terminée en 1958, la patinoire est par la suite surnommée Yale Whale (la Baleine de Yale) de par la forme si
+    particulière de son toit. Le coût original de l’édifice est finalement doublé, atteignant les 1,5 million de dollars.</h4>
+
+    <h2>Attentat</h2>
+
+    <h4>Le 1er mai 1970, plusieurs groupes de rock se produisent en concert à la patinoire dans le cadre des manifestations
+    contre le procès des Black Panthers de New Haven. Peu avant minuit et vers la fin du concert, deux bombes explosent
+    dans le sous-sol nord de la patinoire5. Les explosions ne font aucun blessé, mais brisent les portes vitrées de
+    l'édifice et provoquent la formation de fissures au niveau de son arche. Aucun coupable n'a jamais été identifié, et le
+    président de l'Université Yale Kingman Brewster et le chef de la police de New Haven James Ahern ont soutenu que des
+    partisans pro ou anti-Black Panthers auraient pu, les uns comme les autres, installer les dispositifs.</h4>
+
+    
+
+
+
+    <footer class="footer">
+        <a href="/">
+            <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
+        </a>
+        <p class="footer__text">
+        <h2>Contact</h2>
+        <h3>Alban Chatelet - Groupe C1</h3>
+        <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
+        </p>
+        <p class="footer__copy">&copy; Fondation Cartier</p>
+    </footer>
+</body>

@@ -8,7 +8,7 @@
     <title>Frise d'oeuvres</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
     <link rel="stylesheet" href="src/css/style.css" />
-
+    <link rel="stylesheet" href="src/css/style_carrousel.css" />
     <link rel="icon" href="public/icons/Logo.ico" />
 
 </head>
@@ -36,10 +36,73 @@
 
 
         <p class="header__intro">
-        <h1>Oeuvres majeures d'Eero Saarinen</h1>
+        <h1>Kleinhans Music Hall, Buffalo</h1>
         </p>
     </header>
 
+    
+
+    <div class="carrousel" x-data="{hrefCourant: '#ecran-1',}">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">&lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant =
+                '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+    
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-4.webp" alt="image ecran 1">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-15.webp" alt="image ecran 2">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-16.webp" alt="image ecran 3">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            
+                </figure>
+            </div>
+        </div>    
+    </div>
+
+    <h3>Le Kleinhans Music Hall est une salle de concert américaine à Buffalo, dans l'État de New York. Construit dans le style
+    international selon les plans d'Eliel Saarinen et Eero, il est livré en 1940.</h3>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.6409069283127!2d-78.88607852434136!3d42.901522500722635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d312556ad4ef4d%3A0x80371f56c4411107!2sKleinhans%20Music%20Hall!5e0!3m2!1sfr!2sfr!4v1702550246268!5m2!1sfr!2sfr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <article>
+        <h1>Espaces</h1>
+        <h4>Le Kleinhans Music Hall propose deux espaces de représentations, l'auditorium principal et la salle Mary Seaton.
+        L'auditorium principal peut accueillir 2 441 personnes (il accueillait à l'origine 2 839 sièges mais a subi des
+        rénovations en 2015 réduisant la capacité), et met en valeur le plafond parabolique de la salle et sa conception
+        acoustique.</h4>
+    </article>
+
+    <article>
+        <h1>Évenements</h1>
+        <h2>Discours de Kennedy</h2>
+        <h4>Le 8 septembre 1964, Robert F. Kennedy , qui était à l'époque candidat démocrate au poste de sénateur américain de New
+        York , prononça un discours à Kleinhans devant une foule de 6 000 personnes.</h4>
+
+        <h2>Discours de Martin Luther King Jr.</h2>
+        <h4>Le 9 novembre 1967, quatre mois après que la ville ait été secouée par l' émeute de Buffalo , le Dr Martin Luther King
+        Jr. a prononcé un discours à Kleinhans intitulé « L'avenir de l'intégration ». Dans ce discours, il a proclamé : « Nous
+        nous dirigeons vers le jour où nous jugerons un homme sur son caractère et ses capacités plutôt que sur la couleur de sa
+        peau. »</h4>
+    </article>
 
 
 

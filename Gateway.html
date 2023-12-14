@@ -1,67 +1,141 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen,}">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accordéon avec des booléens</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Frise d'oeuvres</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style_carrousel.css" />
+    <link rel="icon" href="public/icons/Logo.ico" />
+
 </head>
 
-<body>
-    <h1>Accordéon avec des booléens</h1>
-    <accordeon>
-        <section>
-            <div x-data="{ open: false }">
-                <button @click="open = ! open">Bouton 1</button>
+<body x-data="{ menuIsOpen: false }">
+    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header_menuBtn">
+        menu
+    </button>
+    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+
+        <ul>
+            <li>
+                <a href="presentation.html">Qui est Eero Saarinen ?</a>
+            </li>
+            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
+            <li><a href="ticket.html">Réserve ton billet</a></li>
+            <li><a href="contact.html">Contactez nous</a></li>
+        </ul>
+    </nav>
+    <header class="header header--home">
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+        </a>
+
+        <h1 class="header__title header__title--home">Fondation Cartier</h1>
 
 
-                <div x-show="open">
-                    <span x-show="open" x-transition.duration.500ms>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, nulla exercitationem culpa
-                            veritatis vero iste maxime.
-                            Veniam aperiam obcaecati vitae possimus. Officiis nemo, explicabo earum similique beatae
-                            quibusdam odio quo!</p>
-                    </span>
-                </div>
+        <p class="header__intro">
+        <h1>Gateway Arch, Jefferson National Expansion Memorial, Saint-Louis</h1>
+        </p>
+    </header>
+
+
+
+    <div class="carrousel" x-show="!menuIsOpen" x-data="{hrefCourant: '#ecran-1'}">
+        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
+            aria-label="slide précedant">&lt;</button>
+        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
+            aria-label="slide suivant">></button>
+        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant =
+                '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+
+            <div id="ecran-1" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-33.webp" alt="image ecran 1">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-2" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-34.webp" alt="image ecran 2">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div id="ecran-3" class="carrousel_ecran">
+                <figure>
+                    <img src="public/img/image-35.webp" alt="image ecran 3">
+                    <figcaption></figcaption>
+                </figure>
             </div>
 
+            </figure>
+        </div>
+    </div>
+    </div>
 
+    <h3>Le parc national de Gateway Arch, autrefois le mémorial de l'expansion nationale Jefferson, est un parc national
+    américain situé dans le centre-ville de Saint-Louis, dans l'est de l'État du Missouri.</h3>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.069505096356!2d-90.18913957456228!3d38.624282062773716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b2e26e15bcb5%3A0xf8383c57426ed4f1!2sGateway%20Arch%20National%20Park!5e0!3m2!1sfr!2sfr!4v1702590513649!5m2!1sfr!2sfr"
+        width="375" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    
+
+    <div x-data="{ open: 1 }">
+        <section>
+            <button @click="open = 1"><h1>Création et premier financement (1933-1935)</h1></button>
+            <h4><p x-show="open === 1" x-transition.scale.0.duration.1000ms>
+                Vers la fin de l'année 1933, l'avocat et responsable municipal Luther Ely Smith (en), de retour à Saint-Louis du George
+                Rogers Clark National Historical Park de Vincennes dans l'Indiana, étudie les possibilités de développement du quartier
+                de Saint-Louis jouxtant le Mississippi3. Il imagine la construction d'un monument permettant à la fois de relancer
+                l'attrait pour cette rive et de stimuler l'économie locale</p></h4>
+    
+    
+    
         </section>
         <section>
-            <div x-data="{ open: false }">
-                <button @click="open = ! open">Bouton 2</button>
-
-                <div x-show="open">
-                    <span x-show="open" x-transition.duration.500ms>
-
-                        <p>Molestias repellendus harum, quibusdam tempore possimus officia atque quaerat at? Accusantium
-                            rerum magnam nesciunt
-                            aliquam! Sapiente nesciunt optio officiis? Repudiandae nostrum aspernatur error provident
-                            consequuntur quo dolorum!
-                            Reprehenderit, nulla laboriosam.</p>
-                    </span>
-                </div>
-            </div>
+            <button @click="open = 2">2</button>
+    
+            <p x-show="open === 2" x-transition.scale.0.duration.1000ms>Voluptatibus dolorem adipisci hic porro eius,
+                iusto
+                voluptate quia, iure maiores officia ut nam error
+                voluptas minima et
+                totam minus enim numquam! Nihil ducimus dolorem vero vel, veniam iusto ab
+            </p>
+    
+    
         </section>
         <section>
-            <div x-data="{ open: false }">
-                <button @click="open = ! open">Bouton 3</button>
-
-                <div x-show="open">
-                    <span x-show="open" x-transition.duration.500ms>
-                        <p>Eveniet, quam non praesentium, fuga beatae eum laboriosam itaque culpa, nisi illum quos. Quae
-                            dolor quis vero rerum
-                            suscipit, architecto cumque modi? Qui dolor facere nostrum quod quidem, odio quaerat.</p>
-                    </span>
-                </div>
-            </div>
-
-
-
+            <button @click="open = 3">3</button>
+            <p x-show="open === 3" x-transition.scale.0.duration.1000ms>At quisquam non qui ut id numquam tempore eum
+                deleniti voluptatem rerum sed culpa, perferendis neque
+                voluptates nostrum
+                nemo minus officia quis quibusdam ipsam expedita repellendus laborum officiis. Quas, harum.
+            </p>
+    
+    
+    
+    
         </section>
-    </accordeon>
+    </div>
+
+
+
+
+
+    <footer class="footer">
+        <a href="/">
+            <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
+        </a>
+        <p class="footer__text">
+        <h2>Contact</h2>
+        <h3>Alban Chatelet - Groupe C1</h3>
+        <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
+        </p>
+        <p class="footer__copy">&copy; Fondation Cartier</p>
+    </footer>
 </body>
-
-</html>

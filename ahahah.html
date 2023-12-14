@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+
+    <div x-data="{ open: 1 }">
+        <section>
+            <button @click="open = 1">1</button>
+            <p x-show="open === 1" x-transition.scale.0.duration.1000ms>Lorem ipsum dolor sit amet, consectetur
+                adipisicing
+                elit. Laboriosam molestias, exercitationem delectus rerum
+                natus necessitatibus.
+                Veritatis corporis iste ducimus. Numquam molestias excepturi autem officia labore in aspernatur quod
+                quae
+                ipsum.</p>
+
+
+
+        </section>
+        <section>
+            <button @click="open = 2">2</button>
+
+            <p x-show="open === 2" x-transition.scale.0.duration.1000ms>Voluptatibus dolorem adipisci hic porro eius,
+                iusto
+                voluptate quia, iure maiores officia ut nam error
+                voluptas minima et
+                totam minus enim numquam! Nihil ducimus dolorem vero vel, veniam iusto ab
+            </p>
+
+
+        </section>
+        <section>
+            <button @click="open = 3">3</button>
+            <p x-show="open === 3" x-transition.scale.0.duration.1000ms>At quisquam non qui ut id numquam tempore eum
+                deleniti voluptatem rerum sed culpa, perferendis neque
+                voluptates nostrum
+                nemo minus officia quis quibusdam ipsam expedita repellendus laborum officiis. Quas, harum.
+            </p>
+
+
+
+
+        </section>
+    </div>
+</body>
+
+</html>

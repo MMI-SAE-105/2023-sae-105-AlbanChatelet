@@ -3,4 +3,44 @@
         height: 2578px;
         flex-shrink: 0;
     background: rgba(46, 54, 138, 0.71);
+    margin-left: 62.5px;
+    margin-top: -120px;
+}
+
+.recadrage_titre {
+    margin-top: 25px ;
+    margin-left: 35px ;
+}
+
+.dates {
+    
+    background-color: var(--blue);
+    height: 32px;
+    width: 62.5px;
+    margin-top: 0px;
+    margin-left: 250px;
+}
+
+.absolu {
+    position: absolute;
+}
+
+.batiment {
+    display: flex;
+        width: 248px;
+        height: 66px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    color: #FBF9F9;
+        text-align: center;
+        font-family: MuseoModerno;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}
+.image{
+    margin-top: -52px;
+    
 }

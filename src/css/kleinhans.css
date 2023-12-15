@@ -13,3 +13,96 @@
         line-height: normal;
         margin-left: 25px;
 }
+
+.h3 {
+    display: flex;
+        width: 335px;
+        height: 195px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        color: #000;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+        margin-top: -40px;
+            
+}
+
+.h1 {
+    width: 124px;
+        height: 46px;
+        flex-shrink: 0;
+    color: #000;
+            font-family: Montserrat;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+}
+
+.h4 {
+    display: flex;
+        width: 324px;
+        height: 195px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        color: #000;
+            font-family: Roboto;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%;
+        margin-top: 0px;
+           
+}
+.h2 {
+    display: flex;
+        width: 275px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        color: #000;
+            font-family: MuseoModerno;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        margin-top: -30px;
+}
+
+.h2_2 {
+    display: flex;
+    width: 275px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: MuseoModerno;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: -30px;
+    margin-left: -37px;
+}
+
+.h4_2 {
+    display: flex;
+    width: 324px;
+    height: 195px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: -40px;}

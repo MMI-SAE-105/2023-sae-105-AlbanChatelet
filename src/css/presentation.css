@@ -1,0 +1,122 @@
+.portrait {
+    
+    margin-left: 48px;
+    margin-top: -70px;
+}
+
+.portrait_2 {
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.citation {
+    width: 304px;
+        height: 101px;
+        flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.50);
+        font-family: MuseoModerno;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+    margin-left: 30px;
+}
+
+.replique {
+    display: flex;
+        width: 216px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    color: #000;
+        font-family: MuseoModerno;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    margin-left: 165px;
+    margin-top: -20px ;
+}
+
+.paragraphe {
+    display: flex;
+        width: 335px;
+        height: 195px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    
+}
+
+.strophe {
+    display: flex;
+    width: 335px;
+    height: 195px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: 45px;
+
+
+}
+
+.strophe2 {display: flex;
+    width: 335px;
+    height: 338px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+    margin-top:-75px ;
+}
+
+.header1 {
+    display: flex;
+        width: 323px;
+        height: 46px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    color: #000;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    margin-top: -30px;
+    margin-left: -25px;
+}
+
+.header1_2 {
+    display: flex;
+        width: 351px;
+        height: 46px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    color: #000;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}

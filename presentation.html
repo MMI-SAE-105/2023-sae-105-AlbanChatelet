@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr" x-data="{menuIsOpen:false}" :class="{noscroll:menuIsOpen,}">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title>Fondation Cartier</title>
-        <script defer src="https://unpkg.com/alpinejs"></script>
+    <title>Fondation Cartier</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
 
-        <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/typo.css" />
+    <link rel="stylesheet" href="src/css/import.css" />
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/presentation.css" />
+    <link rel="icon" href="public/icons/Logo.ico" />
+    
 
-        <link rel="icon" href="public/icons/Logo.ico" />
 
+</head>
 
-    </head>
+<body>
 
-    <body>
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
-            menu
-        </button>
-        
+    <header class="header header--home">
+        <div aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="decale_menu_haut">
+            <img src="public/icons/Menu Burger.svg" alt="">
+        </div>
+
         <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="titre_menu">MENU</div>
+            <div class="croix"><a href="presentation.html"><img src="public/icons/Croix.svg" alt=""></a></div>
             <ul>
-                <li>
-                    <a href="presentation.html">Qui est Eero Saarinen ?</a>
+                <li class="elements__menu elements_menu">
+                    <a class="elt1" href="presentation.html">Qui est Eero Saarinen ?</a>
                 </li>
-                <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
-                <li><a href="ticket.html">Réserve ton billet</a></li>
-                <li><a href="contact.html">Contactez nous</a></li>
+                <li class="elements__menu elements_menu"><a class="elt2" href="frise.html">Voir ses oeuvres majeures</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt3" href="ticket.html">Réserve ton billet</a></li>
+                <li class="elements__menu elements_menu"><a class="elt4" href="contact.html">Contactez nous</a></li>
             </ul>
         </nav>
-        <header class="header header--home">
-            <a class="header__logo-link" href="/">
-                <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
-            </a>
-        
-            <h1 class="header__title header__title--home">Fondation Cartier</h1>
-        
-            
-            <p class="header__intro">
-            <h1>Qui est Eero Saarinen ?</h1>
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+        </a>
+
+        <h1 class="gros_titre decale_gros_titre">Fondation Cartier</h1>
+        <div class="bande_bleue decale_bande"><img class="img_decale" src="" alt="">
+            <p>
+            <h1 class="centre_texte titre">Qui est Eero Saarinen ?</h1>
             </p>
-        </header>
+        </div>
 
-        <img src="public/img/image-3.webp" alt="">
-        <h2>“Il est vrai qu'un espace se doit d'être actualisé afin de refléter l'esprit de son temps.”</h2>
 
-        <h2>Eero Saarinen</h2>
+    </header>
 
-        <h3>Eero Saarinen est un architecte et designer américain d'origine finlandaise né le 20 août 1910 à Kirkkonummi et mort le
+        <img class="portrait" src="public/img/image-3.webp" alt="">
+        <h2 class="citation">“Il est vrai qu'un espace se doit d'être actualisé afin de refléter l'esprit de son temps.”</h2>
+
+        <h2 class="replique">Eero Saarinen</h2>
+
+        <h3 class="paragraphe">Eero Saarinen est un architecte et designer américain d'origine finlandaise né le 20 août 1910 à Kirkkonummi et mort le
         1ᵉʳ septembre 1961 à Ann Arbor. Fils d'Eliel Saarinen, architecte finlandais réputé, il émigre avec sa famille alors
         qu'il est adolescent.</h3>
 
-        <h1>Les premières années</h1>
+        <h1 class="header1">Les premières années</h1>
 
-        <h3>Pour avoir reçu le second prix d'un concours d'architecture pour imaginer le nouveau siège du Chicago Tribune en 1922,
+        <h3 class="strophe">Pour avoir reçu le second prix d'un concours d'architecture pour imaginer le nouveau siège du Chicago Tribune en 1922,
         Eliel Saarinen est encensé par la critique. Alors en 1923, les Saarinen partent aux États-Unis. Ils s'installent à Ann
         Arbor puis à Bloomfield Hills près de Détroit dans le Michigan. Son père devient le premier président de la Cranbrook
         Educational Community,. De 1930 à 1931, Eero Saarinen étudie la sculpture à l'Académie de la Grande Chaumière de Paris.</h3>
 
-        <img src="public/img/image-13_1.webp" alt="">
+        <img class="portrait_2" src="public/img/image-13_1.webp" alt="">
 
-        <footer class="footer">
-            <a href="/">
-                <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
-            </a>
-            <p class="footer__text">
-            <h2>Contact</h2>
-            <h3>Alban Chatelet - Groupe C1</h3>
-            <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
-            </p>
-            <p class="footer__copy">&copy; Fondation Cartier</p>
+        <h1 class="header1_2">Débuts comme architecte et premiers prix</h1>
+
+        <h3 class="strophe2">L'un de ses premiers projets architecturaux est la salle de concert et de théâtre de Tanglewood à Lenox dans le
+        Massachusetts, résidence d'été de l'Orchestre symphonique de Boston. Projet au long cours, l'aménagement du site
+        mobilise l'agence familiale à plusieurs reprises au cours de l'histoire.</h3>
+
+        <footer class="footer bande_bleue_footer">
+        
+            <section class="">
+                <div class="ligne_blanche1"></div>
+        
+                <a class="contact" href="contact.html">
+                    <h2 class="position_contact">Contact</h2>
+                </a>
+                <h3 class="name">Alban Chatelet - Groupe C1</h3>
+                <div class="ligne_blanche2"></div>
+            </section>
+        
+            <div>
+                <h4 class="pedagogie">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI
+                    Montbéliard</h4>
+                </p>
+                <p class="pedagogie cartier">&copy; Fondation Cartier</p>
+                <div class="logo position_logo"><img src="public/icons/logo_blanc.svg" alt=""></div>
+            </div>
         </footer>
     </body>
 </html>

@@ -1,4 +1,4 @@
-.ligne_blanche {
+.ligne_blanche1 {
     width: 275px;
     
     height: 3px;
@@ -9,9 +9,20 @@
 
 }
 
+.ligne_blanche2 {
+    width: 275px;
+
+    height: 3px;
+
+    background-color: #ffffff;
+
+    margin-left: 50px;
+    margin-top: 10px;
+
+}
 .bande_bleue_footer {
     background: linear-gradient(to top, var(--blue), #ffffff);
-        height: 304px;
+        height: 350px;
         width: 500px;
         margin-left: -10px;
         
@@ -23,14 +34,17 @@
         flex-shrink: 0;
     color: #FFF;
         font-family: Roboto;
-        font-size: 25px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 500;
         line-height: 110%;
     text-decoration: none !important;
-        color: #ffffff !important;
-    margin-left: 150px;
+}
+
+.position_contact {
     
+    margin-top: 60px;
+    margin-left: 135px;
 }
 
 .name {
@@ -43,5 +57,32 @@
         font-style: normal;
         font-weight: 500;
         line-height: 110%;
-    margin-left: 70px;        
+    margin-left: 70px; 
+    margin-top: 40px;       
+}
+
+.pedagogie {
+    width: 200px;
+        height: 122px;
+        flex-shrink: 0;
+    color: #F8F8F8;
+        font-family: Roboto;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    margin-left: 20px;
+    margin-top:40px ;
+}
+
+.cartier {
+    margin-top: -60px;
+}
+
+
+
+.position_logo {
+    margin-left: 250px;
+    margin-top: -200px;
+    
 }

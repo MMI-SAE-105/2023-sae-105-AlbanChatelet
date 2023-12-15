@@ -1,0 +1,6 @@
+.bande_longue {
+    width: 250px;
+        height: 2578px;
+        flex-shrink: 0;
+    background: rgba(46, 54, 138, 0.71);
+}

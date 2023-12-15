@@ -5,76 +5,98 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frise d'oeuvres</title>
+
+    <title>Fondation Cartier</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
+
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/typo.css" />
+    <link rel="stylesheet" href="src/css/import.css" />
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/kleinhans.css" />
+    <link rel="stylesheet" href="src/css/presentation.css" />
     <link rel="stylesheet" href="src/css/style_carrousel.css" />
     <link rel="icon" href="public/icons/Logo.ico" />
 
+
+
 </head>
 
-<body x-data="{ menuIsOpen: false }">
-    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header_menuBtn">
-        menu
-    </button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-        
-        <ul>
-            <li>
-                <a href="presentation.html">Qui est Eero Saarinen ?</a>
-            </li>
-            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
-            <li><a href="ticket.html">Réserve ton billet</a></li>
-            <li><a href="contact.html">Contactez nous</a></li>
-        </ul>
-    </nav>
+<body>
+
     <header class="header header--home">
+        <div aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="decale_menu_haut">
+            <img src="public/icons/Menu Burger.svg" alt="">
+        </div>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="titre_menu">MENU</div>
+            <div class="croix"><a href="presentation.html"><img src="public/icons/Croix.svg" alt=""></a></div>
+            <ul>
+                <li class="elements__menu elements_menu">
+                    <a class="elt1" href="presentation.html">Qui est Eero Saarinen ?</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt2" href="frise.html">Voir ses oeuvres majeures</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt3" href="ticket.html">Réserve ton billet</a></li>
+                <li class="elements__menu elements_menu"><a class="elt4" href="contact.html">Contactez nous</a></li>
+            </ul>
+        </nav>
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
         </a>
 
-        <h1 class="header__title header__title--home">Fondation Cartier</h1>
+        <h1 class="gros_titre decale_gros_titre">Fondation Cartier</h1>
+        <div class="bande_bleue decale_bande"><img class="img_decale" src="" alt="">
+            <p>
+            <h1 class="centre_texte titre">Qui est Eero Saarinen ?</h1>
+            </p>
+        </div>
 
 
-        <p class="header__intro">
-        <h1>Kleinhans Music Hall, Buffalo</h1>
-        </p>
     </header>
 
     
-    
+</body> 
 
-    <div class="carrousel" x-data="{hrefCourant: '#ecran-1',}">
-        <button @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-avant"
-            aria-label="slide précedant">&lt;</button>
-        <button @click="$refs.parent.scrollLeft += $refs.parent.clientWidth" class="carrousel_btn carrousel_btn-apres"
-            aria-label="slide suivant">></button>
-        <div class="carrousel_parent-ecrans" x-ref="parent" @scroll.debounce.250ms.passive="hrefCourant =
-                '#'+[...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
-    
-            <div id="ecran-1" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/image-4.webp" alt="image ecran 1">
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            <div id="ecran-2" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/image-15.webp" alt="image ecran 2">
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            <div id="ecran-3" class="carrousel_ecran">
-                <figure>
-                    <img src="public/img/image-16.webp" alt="image ecran 3">
-                    <figcaption></figcaption>
-                </figure>
-            </div>
-            
-                </figure>
-            </div>
-        </div>    
+<div class="carrousel" x-data="{hrefCourant: '#ecran-1'}">
+    <button class="carrousel_btn carrousel_btn-avant" aria-label="slideprécedant"
+        @click="$refs.parent.scrollLeft-=$refs.parent.clientWidth">
+        &lt;
+    </button>
+    <button class="carrousel_btn carrousel_btn-apres" aria-label="slidesuivant"
+        @click="$refs.parent.scrollLeft+=$refs.parent.clientWidth">
+        >
+    </button>
+    <div class="carrousel_parent-ecrans" x-ref="parent"
+        @scroll.debounce.250ms.passive="hrefCourant = '#' + [...$refs.parent.children].find(e=>e.getBoundingClientRect().x>=0).id">
+        <div id="ecran-1" class="carrousel_ecran">
+            <figure>
+                <img class="carrousel_ecran_img" src="/public/img/image-4.webp" alt="oeuvre 1">
+                <figcaption><p class="legends">Sur le côté</p></figcaption>
+            </figure>
+        </div>
+        <div id="ecran-2" class="carrousel_ecran">
+            <figure>
+                <img class="carrousel_ecran_img" src="/public/img/image-15.webp" alt="oeuvre 2">
+                <figcaption><p class="legends">De dérrière</p></figcaption>
+            </figure>
+        </div>
+        <div id="ecran-3" class="carrousel_ecran">
+            <figure>
+                <img class="carrousel_ecran_img" src="/public/img/image-16.webp" alt="oeuvre 3">
+                <figcaption><p class="legends">De l'intérieur</p></figcaption>
+            </figure>
+        </div>
+
     </div>
+</div>
+</div>
+</div>
 
     <h3>Le Kleinhans Music Hall est une salle de concert américaine à Buffalo, dans l'État de New York. Construit dans le style
     international selon les plans d'Eliel Saarinen et Eero, il est livré en 1940.</h3>

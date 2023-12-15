@@ -64,17 +64,12 @@
     margin-top: -20px;
 }
 
-.en_savoir_plus {
-    background-color: var(--blue);
-    height: 40px;
-    width: 149px;
-    margin-top: -50px;
-    margin-left: 180px;
-    
-}
+
+
+
 
 .index {
-    z-index: 2;
+    z-index: 1;
 }
 
 .titre_tab {
@@ -160,4 +155,24 @@
 .decale_liste_jaune {
     margin-top: -10px;
     margin-left: -25px;
+}
+
+
+
+.image3 {
+    display: block;
+    max-width: 100%;
+    
+}
+
+.cadre {
+    position: relative;
+    
+    background-color: #2E368A;
+    padding: 10px;
+    
+    color: #fff;
+    margin-left: 200px;
+    margin-top: -10px;
+    
 }

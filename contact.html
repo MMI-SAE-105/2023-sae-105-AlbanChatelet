@@ -5,41 +5,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulaire de contact</title>
+
+    <title>Fondation Cartier</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
+
     <link rel="stylesheet" href="src/css/style.css" />
-    
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/typo.css" />
+    <link rel="stylesheet" href="src/css/import.css" />
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link rel="stylesheet" href="src/css/frise.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/contact.css" />
+    <link rel="stylesheet" href="src/css/presentation.css" />
     <link rel="icon" href="public/icons/Logo.ico" />
-    
+
+
+
 </head>
+
 <body>
-    <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
-        menu
-    </button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
-        <ul>
-            <li>
-                <a href="presentation.html">Qui est Eero Saarinen ?</a>
-            </li>
-            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
-            <li><a href="ticket.html">Réserve ton billet</a></li>
-            <li><a href="contact.html">Contactez nous</a></li>
-        </ul>
-    </nav>
+
     <header class="header header--home">
+        <div aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="decale_menu_haut">
+            <img src="public/icons/Menu Burger.svg" alt="">
+        </div>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="titre_menu">MENU</div>
+            <div class="croix"><a href="presentation.html"><img src="public/icons/Croix.svg" alt=""></a></div>
+            <ul>
+                <li class="elements__menu elements_menu">
+                    <a class="elt1" href="presentation.html">Qui est Eero Saarinen ?</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt2" href="frise.html">Voir ses oeuvres majeures</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt3" href="ticket.html">Réserve ton billet</a></li>
+                <li class="elements__menu elements_menu"><a class="elt4" href="contact.html">Contactez nous</a></li>
+            </ul>
+        </nav>
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
         </a>
-    
-        <h1 class="header__title header__title--home">Fondation Cartier</h1>
-    
-    
-        <p class="header__intro">
-        <h1>Formulaire de contact</h1>
-        </p>
+
+        <h1 class="gros_titre decale_gros_titre">Fondation Cartier</h1>
+        <div class="bande_bleue decale_bande"><img class="img_decale" src="" alt="">
+            <p>
+            <h1 class="centre_texte titre">
+                <center>Formulaire de contact</center>
+            </h1>
+            </p>
+        </div>
+
+
     </header>
 
-    <h3>Si vous vous posez des questions par rapport au site où si il y a une erreur dedans, n’hésitez pas à faire un retour !</h3>
+    <h3 class="questions">Si vous vous posez des questions par rapport au site où si il y a une erreur dedans, n’hésitez pas à faire un retour !</h3>
 
     <main class="container">
         

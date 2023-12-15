@@ -126,19 +126,4 @@
     
 }
 
-.en_savoir_plus_typo {
-    width: 126px;
-    height: 32px;
-    flex-shrink: 0;
 
-    color: #F2F2F2;
-    font-family: MuseoModerno;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-    text-decoration: none !important;
-    color: #ffffff !important;
-    margin-left: 15px;
-    margin-top: 20px;
-}

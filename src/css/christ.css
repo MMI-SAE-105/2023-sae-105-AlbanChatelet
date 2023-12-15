@@ -1,0 +1,27 @@
+.quatre{
+    color: #000;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        
+}
+
+.un {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+}
+
+.deux {
+    color: #000;
+        font-family: MuseoModerno;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+}

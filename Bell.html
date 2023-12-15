@@ -5,42 +5,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frise d'oeuvres</title>
+
+    <title>Fondation Cartier</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
+
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/typo.css" />
+    <link rel="stylesheet" href="src/css/import.css" />
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/kleinhans.css" />
+    <link rel="stylesheet" href="src/css/presentation.css" />
     <link rel="stylesheet" href="src/css/style_carrousel.css" />
-    <link rel="stylesheet" href="src/css/style_galerie.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js">
+    <link rel="stylesheet" href="src/css/christ.css" />
     <link rel="icon" href="public/icons/Logo.ico" />
+
+
 
 </head>
 
-<body x-data="{ menuIsOpen: false }">
-    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header_menuBtn">
-        menu
-    </button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+<body>
 
-        <ul>
-            <li>
-                <a href="presentation.html">Qui est Eero Saarinen ?</a>
-            </li>
-            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
-            <li><a href="ticket.html">Réserve ton billet</a></li>
-            <li><a href="contact.html">Contactez nous</a></li>
-        </ul>
-    </nav>
     <header class="header header--home">
+        <div aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="decale_menu_haut">
+            <img src="public/icons/Menu Burger.svg" alt="">
+        </div>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="titre_menu">MENU</div>
+            <div class="croix"><a href="presentation.html"><img src="public/icons/Croix.svg" alt=""></a></div>
+            <ul>
+                <li class="elements__menu elements_menu">
+                    <a class="elt1" href="presentation.html">Qui est Eero Saarinen ?</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt2" href="frise.html">Voir ses oeuvres majeures</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt3" href="ticket.html">Réserve ton billet</a></li>
+                <li class="elements__menu elements_menu"><a class="elt4" href="contact.html">Contactez nous</a></li>
+            </ul>
+        </nav>
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
         </a>
 
-        <h1 class="header__title header__title--home">Fondation Cartier</h1>
+        <h1 class="gros_titre decale_gros_titre">Fondation Cartier</h1>
+        <div class="bande_bleue decale_bande"><img class="img_decale" src="" alt="">
+            <p>
+            <h1 class="centre_texte titre">
+                <center>Bell Labs Holmdel Complex, Holmdel</center>
+            </h1>
+            </p>
+        </div>
 
 
-        <p class="header__intro">
-        <h1>Bell Labs Holmdel Complex, Holmdel</h1>
-        </p>
+    </header>
+    <a class="header__logo-link" href="/">
+        <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+    </a>
+
+
+
+
+
     </header>
 
 
@@ -77,8 +106,8 @@
     </div>
     </div>
 
-    <h3>Le Bell Labs Holmdel Complex est un ancien campus des Laboratoires Bell situé à Holmdel, dans le New Jersey. Conçu par
-    l'architecte Eero Saarinen et construit entre 1959 et 1962, il a servi pendant 44 ans pour près de 6 000 ingénieurs.</h3>
+    <h4>Le Bell Labs Holmdel Complex est un ancien campus des Laboratoires Bell situé à Holmdel, dans le New Jersey. Conçu par
+    l'architecte Eero Saarinen et construit entre 1959 et 1962, il a servi pendant 44 ans pour près de 6 000 ingénieurs.</h4>
 
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.974413677735!2d-74.17232791667186!3d40.365091685176836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2325e2f0bce61%3A0xd20f261c8417a81a!2sBell%20Labs%20Holmdel%20Complex%2C%20101%20Crawfords%20Corner%20Rd%2C%20Holmdel%2C%20NJ%2007733%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2sfr!4v1702585088181!5m2!1sfr!2sfr"

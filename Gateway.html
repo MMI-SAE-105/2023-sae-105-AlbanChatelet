@@ -5,40 +5,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frise d'oeuvres</title>
+
+    <title>Fondation Cartier</title>
     <script defer src="https://unpkg.com/alpinejs"></script>
+
     <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/typo.css" />
+    <link rel="stylesheet" href="src/css/import.css" />
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
+    <link rel="stylesheet" href="src/css/kleinhans.css" />
+    <link rel="stylesheet" href="src/css/presentation.css" />
     <link rel="stylesheet" href="src/css/style_carrousel.css" />
+    <link rel="stylesheet" href="src/css/christ.css" />
     <link rel="icon" href="public/icons/Logo.ico" />
+
+
 
 </head>
 
-<body x-data="{ menuIsOpen: false }">
-    <button aria-controls="mainNav" @click="menuIsOpen = !menuIsOpen" class="header_menuBtn">
-        menu
-    </button>
-    <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+<body>
 
-        <ul>
-            <li>
-                <a href="presentation.html">Qui est Eero Saarinen ?</a>
-            </li>
-            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
-            <li><a href="ticket.html">Réserve ton billet</a></li>
-            <li><a href="contact.html">Contactez nous</a></li>
-        </ul>
-    </nav>
     <header class="header header--home">
+        <div aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="decale_menu_haut">
+            <img src="public/icons/Menu Burger.svg" alt="">
+        </div>
+
+        <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="titre_menu">MENU</div>
+            <div class="croix"><a href="presentation.html"><img src="public/icons/Croix.svg" alt=""></a></div>
+            <ul>
+                <li class="elements__menu elements_menu">
+                    <a class="elt1" href="presentation.html">Qui est Eero Saarinen ?</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt2" href="frise.html">Voir ses oeuvres majeures</a>
+                </li>
+                <li class="elements__menu elements_menu"><a class="elt3" href="ticket.html">Réserve ton billet</a></li>
+                <li class="elements__menu elements_menu"><a class="elt4" href="contact.html">Contactez nous</a></li>
+            </ul>
+        </nav>
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
         </a>
 
-        <h1 class="header__title header__title--home">Fondation Cartier</h1>
+        <h1 class="gros_titre decale_gros_titre">Fondation Cartier</h1>
+        <div class="bande_bleue decale_bande"><img class="img_decale" src="" alt="">
+            <p>
+            <h1 class="centre_texte titre">
+                <center>Gateway Arch, Missouri</center>
+            </h1>
+            </p>
+        </div>
 
 
-        <p class="header__intro">
-        <h1>Gateway Arch, Jefferson National Expansion Memorial, Saint-Louis</h1>
-        </p>
+
+        <a class="header__logo-link" href="/">
+            <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
+        </a>
+
+
+
+
+
     </header>
 
 
@@ -75,8 +106,8 @@
     </div>
     </div>
 
-    <h3>Le parc national de Gateway Arch, autrefois le mémorial de l'expansion nationale Jefferson, est un parc national
-    américain situé dans le centre-ville de Saint-Louis, dans l'est de l'État du Missouri.</h3>
+    <h4 class="quatre">Le parc national de Gateway Arch, autrefois le mémorial de l'expansion nationale Jefferson, est un parc national
+    américain situé dans le centre-ville de Saint-Louis, dans l'est de l'État du Missouri.</h4>
 
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3117.069505096356!2d-90.18913957456228!3d38.624282062773716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d8b2e26e15bcb5%3A0xf8383c57426ed4f1!2sGateway%20Arch%20National%20Park!5e0!3m2!1sfr!2sfr!4v1702590513649!5m2!1sfr!2sfr"
@@ -87,17 +118,17 @@
 
     <div x-data="{ open: 1 }">
         <section>
-            <button @click="open = 1"><h1>Création et premier financement (1933-1935)</h1></button>
-            <h4><p x-show="open === 1" x-transition.scale.0.duration.1000ms>
+            <button @click="open = 1"><h1 class="un">Création et premier financement (1933-1935)</h1></button>
+            <h4 class="quatre"><p x-show="open === 1" x-transition.scale.0.duration.1000ms>
                 Vers la fin de l'année 1933, l'avocat et responsable municipal Luther Ely Smith (en), de retour à Saint-Louis du George
                 Rogers Clark National Historical Park de Vincennes dans l'Indiana, étudie les possibilités de développement du quartier
                 de Saint-Louis jouxtant le Mississippi3. Il imagine la construction d'un monument permettant à la fois de relancer
                 l'attrait pour cette rive et de stimuler l'économie locale</p></h4>
         </section>
         <section>
-            <button @click="open = 2"><h1>Acquisition foncière, opposition, démolition et premières négociations sur les voies ferrées (1936-1939)</h1></button>
+            <button @click="open = 2"><h1 class="un">Acquisition foncière, opposition, démolition et premières négociations sur les voies ferrées (1936-1939)</h1></button>
     
-            <h4><p x-show="open === 2" x-transition.scale.0.duration.1000ms>Avec l'utilisation de la subvention de 1935 de 6,75 millions de dollars et les obligations de la ville de 2,25 millions
+            <h4 class="quatre"><p x-show="open === 2" x-transition.scale.0.duration.1000ms>Avec l'utilisation de la subvention de 1935 de 6,75 millions de dollars et les obligations de la ville de 2,25 millions
             de dollars6, le NPS acquiert les bâtiments situés sur le site, à travers l'expropriation plutôt que le rachat classique,
             afin de les faire démolir. En septembre 1938, le processus d'expropriation est complet. La légalité de ce dernier fait
             l'objet de nombreux procès qui se terminent le 27 janvier 1939 lorsque la Cour d'appel fédérale des États-Unis juge que
@@ -107,8 +138,8 @@
     
         </section>
         <section>
-            <button @click="open = 3"><h1>Participation à un concours architectural (1945-1948)</h1></button>
-            <h4><p x-show="open === 3" x-transition.scale.0.duration.1000ms>En novembre 1944, Smith échange avec Newton B. Drury, le directeur du National Park Service, sur la conception du
+            <button @click="open = 3"><h1 class="un">Participation à un concours architectural (1945-1948)</h1></button>
+            <h4 class="quatre"><p x-show="open === 3" x-transition.scale.0.duration.1000ms>En novembre 1944, Smith échange avec Newton B. Drury, le directeur du National Park Service, sur la conception du
             mémorial, affirmant que celui-ci doit être « transcendant dans ses valeurs spirituelles et esthétiques », représentées
             au mieux par un « élément central : une colonne, un bâtiment, une arche, ou autre chose qui symboliserait la culture et
             la civilisation américaines »

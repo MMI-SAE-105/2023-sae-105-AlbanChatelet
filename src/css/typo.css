@@ -1,0 +1,144 @@
+.titre {
+    color: #F2F2F2;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.gros_titre {
+    display: flex;
+    width: 221px;
+    height: 49px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: Stick No Bills;
+    
+}
+
+.elements__menu {
+    display: flex;
+    width: 261px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: MuseoModerno;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.header_2_center {
+    display: flex;
+    width: 251px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    color: #000;
+    font-family: MuseoModerno;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 50px;
+    margin-top: -90px;
+}
+
+.header_4_center_gray {
+    width: 357px;
+    height: 36px;
+    flex-shrink: 0;
+
+    color: rgba(0, 0, 0, 0.32);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: -15px;
+}
+
+.position_reserver {
+    margin-top: -38px;
+    margin-left: 65px;
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
+
+.legende_apercu {
+    color: rgba(0, 0, 0, 0.32);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    margin-top: -12px;
+    margin-left: 200px;
+}
+
+.voir_oeuvres {
+    width: 312.639px;
+    height: 32px;
+    flex-shrink: 0;
+    color: #F2F2F2;
+    font-family: MuseoModerno;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none !important;
+    color: #ffffff !important;
+}
+
+.h1_center {
+    width: 325px;
+    height: 46px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 40px;
+}
+
+.h1 {
+    width: 325px;
+    height: 46px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+.en_savoir_plus_typo {
+    width: 126px;
+    height: 32px;
+    flex-shrink: 0;
+
+    color: #F2F2F2;
+    font-family: MuseoModerno;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    margin-left: 15px;
+    margin-top: 20px;
+}

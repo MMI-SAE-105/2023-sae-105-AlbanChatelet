@@ -1,0 +1,163 @@
+.bande_orange {
+    background-color: var(--orange);
+    height: 62px;
+    width: 325px;
+    margin-top: -25px;
+    margin-left: 25px;
+}
+
+.ticket {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    fill: #FFF;
+    margin-top: 18px;
+    margin-left: 16px;
+}
+
+.reserver {
+    width: 249px;
+    height: 32px;
+    flex-shrink: 0;
+    color: #FBF9F9;
+    font-family: MuseoModerno;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.position_apercu {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.position_apercu_texte {
+    display: flex;
+    width: 197px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;   
+}
+
+.bande_bleue_petite {
+    background-color: var(--blue);
+    height: 36px;
+    width: 340px;
+    margin-top: -20px;
+    margin-left: 15px;
+}
+
+.icon_paysage {
+    margin-top: 7.5px;
+    margin-left: 7.5px;
+}
+
+.position_voir_oeuvres {
+    margin-top: -30px;
+    margin-left: 40px;
+}
+
+.eero {
+    margin-left: 60px;
+    margin-top: -20px;
+}
+
+.en_savoir_plus {
+    background-color: var(--blue);
+    height: 40px;
+    width: 149px;
+    margin-top: -50px;
+    margin-left: 180px;
+    
+}
+
+.index {
+    z-index: 2;
+}
+
+.titre_tab {
+    margin-top: 40px;
+    margin-left: 5px ;
+}
+
+.cadre_bleu {
+    width: 315px;
+    height: 350px;
+    border: 2px solid var(--blue);
+    padding: 20px;
+}
+
+.element_bleu {
+    color: #2E368A;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.decale_elt_bleu {
+    margin-top:-52px ;
+    margin-left: 75px;
+}
+
+.decale_clock {
+    margin-left: -5px;
+    margin-top: -10px;
+}
+
+.decale_calendar_text {
+    margin-left: 75px;
+    margin-top: -42px;
+}
+
+.lune {
+    margin-top: 10px;
+}
+.lune_texte {
+    margin-top: -58px;
+    margin-left: 75px;
+}
+
+.exit {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.exit_texte {
+    margin-left: 75px;
+    margin-top: -62px;
+}
+
+.remonte {
+    margin-top: -20px;
+}
+
+.remonte2 {
+    margin-top: -20px;
+}
+
+.cadre_orange {
+    width: 315px;
+    height: 300px;
+    border: 2px solid var(--orange);
+    padding: 20px;
+}
+
+.liste_jaune {
+    width: 312px;
+    height: 331px;
+    flex-shrink: 0;
+    color: #BF8717;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+.decale_liste_jaune {
+    margin-top: -10px;
+    margin-left: -25px;
+}

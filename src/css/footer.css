@@ -1,0 +1,47 @@
+.ligne_blanche {
+    width: 275px;
+    
+    height: 3px;
+    
+    background-color: #ffffff;
+    
+    margin-left:50px ;
+
+}
+
+.bande_bleue_footer {
+    background: linear-gradient(to top, var(--blue), #ffffff);
+        height: 304px;
+        width: 500px;
+        margin-left: -10px;
+        
+}
+
+.contact {
+    width: 93.266px;
+        height: 19.785px;
+        flex-shrink: 0;
+    color: #FFF;
+        font-family: Roboto;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    text-decoration: none !important;
+        color: #ffffff !important;
+    margin-left: 150px;
+    
+}
+
+.name {
+    width: 308.57px;
+        height: 46.764px;
+        flex-shrink: 0;
+    color: #FFF;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    margin-left: 70px;        
+}

@@ -11,6 +11,12 @@
 
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link rel="stylesheet" href="src/css/variables.css" />
+    <link rel="stylesheet" href="src/css/typo.css" />
+    <link rel="stylesheet" href="src/css/import.css" />
+    <link rel="stylesheet" href="src/css/menu.css" />
+    <link rel="stylesheet" href="src/css/index.css" />
     <link rel="icon" href="public/icons/Logo.ico" />
 
     
@@ -19,89 +25,96 @@
 <body>
     
     <header class="header header--home">
-        <button aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="header_menuBtn">
-        menu
-    </button>
+        <div aria-controls="mainNav" @click="menuIsOpen = ! menuIsOpen" class="decale_menu_haut">
+        <img src="public/icons/Menu Burger.svg" alt="">
+        </div>
     
     <nav id="mainNav" x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+        <div class="titre_menu">MENU</div>
+        <div class="croix"><a href="index.html"><img src="public/icons/Croix.svg" alt=""></a></div>
         <ul>
-            <li>
-                <a href="presentation.html">Qui est Eero Saarinen ?</a>
+            <li class="elements__menu elements_menu">
+                <a class="elt1" href="presentation.html">Qui est Eero Saarinen ?</a>
             </li>
-            <li><a href="frise.html">Voir ses oeuvres majeures</a></li>
-            <li><a href="ticket.html">Réserve ton billet</a></li>
-            <li><a href="contact.html">Contactez nous</a></li>
+            <li class="elements__menu elements_menu"><a class="elt2" href="frise.html">Voir ses oeuvres majeures</a></li>
+            <li class="elements__menu elements_menu"><a class="elt3" href="ticket.html">Réserve ton billet</a></li>
+            <li class="elements__menu elements_menu"><a class="elt4" href="contact.html">Contactez nous</a></li>
         </ul>
     </nav>
         <a class="header__logo-link" href="/">
             <img class="header__logo" src="public/icons/Logo.svg" alt="Logo Fondation Cartier" />
         </a>
 
-        <h1 class="header__title header__title--home">Fondation Cartier</h1>
-        <div class="back"><img src="public/img/image-14.webp" alt="">
+        <h1 class="gros_titre decale_gros_titre">Fondation Cartier</h1>
+        <div class="bande_bleue decale_bande"><img class="img_decale"src="public/img/image-14.webp" alt="">
         <p>
-            <h1class="title">Eero Saarinen, et l'art de faire évoluer l'architecture</h1>
+            <h1 class="title decale_texte titre">Eero Saarinen, et l'art de faire évoluer l'architecture</h1>
         </p></div>
+        
         
     </header>
 
     <main>
         <section class="section">
             <header class="section__header intro">
-                <h2 class="intro__title">Du 13 avril au 23 juin 2024</h2>
+                <h2 class="header_2_center">Du 13 avril au 23 juin 2024</h2>
                 <p class="intro__text">
-                    <h4>Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
+                    <h4 class="header_4_center_gray">Fondation Cartier, 261 Bd Raspail, 75014 Paris</h4>
                 </p>
             </header>
         </section>
     </main>
 
-    <div>
-        <img src="public/icons/Ticket.svg" alt="Icone de ticket" />   
-        <h2><a href="ticket.html">Réserver dès maintenant</a></h2>
+    <div class="bande_orange">
+        <img class="ticket" src="public/icons/Ticket.svg" alt="Icone de ticket" />   
+        <a href="ticket.html"><h2 class="reserver position_reserver">Réserver dès maintenant</h2></a>
     </div>
 
-    <img src="public/img/image-1.webp" alt="">
-    <legend><h4>Aperçu de l'exposition</h4></legend>
+    <img class="position_apercu" src="public/img/image-1.webp" alt="">
+    <legend><h4 class="position_apercu_texte legende_apercu">Aperçu de l'exposition</h4></legend>
 
-    <div>
-        <img src="public/icons/paysage.svg" alt="Icone de photo" />
-        <h3><a href="frise.html">Voir les oeuvres de Eero Saarinen</a></h3>
+    <div class="bande_bleue_petite">
+        <img class="icon_paysage" src="public/icons/paysage.svg" alt="Icone de photo" />
+        <a href="frise.html"><h3 class="voir_oeuvres position_voir_oeuvres">Voir les oeuvres de Eero Saarinen</h3></a>
     </div>
-
-    <h1>Qui est Eero Saarinen ?</h1>
-    <img src="public/img/image-2.webp" alt="">
-
-    <div>
-        <h3><a href="presentation.html">En savoir plus</a></h3>
+    <h1 class="h1_center">Qui est Eero Saarinen ?</h1>
+    <img class="eero" src="public/img/image-2.webp" alt="">
+    
+    <div class="en_savoir_plus index"> 
+        
+        <a href="presentation.html"><h3 class="en_savoir_plus_typo">En savoir plus</h3></a>
     </div>
-    <section>
-    <h1>Lieu & horaires</h1>
+    
+    
+    
+    <h1 class="titre_tab h1">Lieu & horaires</h1>
+    <section class="cadre_bleu remonte">
         <div>
             <img src="public/icons/map.svg" alt="Icone de map" />
-            <h3 class="">Fondation Cartier, 261 Bd Raspail, 75014 Paris</h3>
+            <h3 class="element_bleu decale_elt_bleu">Fondation Cartier, 261 Bd Raspail, 75014 Paris</h3>
         </div>
         <div>
-            <img src="public/icons/clock.svg" alt="Icone d'horloge" />
-            <h3 class="">Tous les jours de 11h à 20h, sauf le lundi</h3>
+            <img class="decale_clock" src="public/icons/clock.svg" alt="Icone d'horloge" />
+            <h3 class="element_bleu decale_elt_bleu">Tous les jours de 11h à 20h, sauf le lundi</h3>
         </div>
         <div>
-            <img src="public/icons/calendar.svg" alt="Icone de calendrier" />
-            <h3 class="">Du 13 avril au 23 juin 2024</h3>
+            <img class="" src="public/icons/calendar.svg" alt="Icone de calendrier" />
+            <h3 class="element_bleu decale_calendar_text">Du 13 avril au 23 juin 2024</h3>
         </div>
         <div>
-            <img src="public/icons/lune.svg" alt="Icone de lune" />
-            <h3 class="">Nocturne le mardi, jusqu'à 22h</h3>
+            <img class="lune" src="public/icons/lune.svg" alt="Icone de lune" />
+            <h3 class="element_bleu lune_texte">Nocturne le mardi, jusqu'à 22h</h3>
         </div>
         <div>
-            <img src="public/icons/close.svg" alt="Icone de sortie" />
-            <h3 class="">La fermeture des salles débute à 19h45 (21h45 les mardis)</h3>
+            <img class="exit" src="public/icons/close.svg" alt="Icone de sortie" />
+            <h3 class="element_bleu exit_texte">La fermeture des salles débute à 19h45 (21h45 les mardis)</h3>
         </div>
     </section>
 
-    <section>
-        <h1>Tarifs</h1>
-        <ul>
+    
+    <h1 class="titre_tab h1">Tarifs</h1>
+    <section class="cadre_orange remonte">
+        <ul class="liste_jaune decale_liste_jaune">
             <li>Plein tarif : 11€</li>
             <li>Plein tarif : 11€</li>
             <li>Réduction 13 - 25 ans : 5€</li>
@@ -118,13 +131,17 @@
         </ul>
     </section>
 
-    <footer class="footer">
+    <footer class="footer bande_bleue_footer">
         <a href="/">
             <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
         </a>
-        <p class="footer__text">
-        <h2><a href="contact.html">Contact</a></h2>
-        <h3>Alban Chatelet - Groupe C1</h3>
+        <section class="remonte remonte2"><div class="ligne_blanche"></div>
+            
+            <a class="contact"href="contact.html"><h2 class="remonte">Contact</h2></a>
+            <h3 class="name">Alban Chatelet - Groupe C1</h3>
+            <div class="ligne_blanche remonte"></div>
+        </section>
+        
         <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
         </p>
         <p class="footer__copy">&copy; Fondation Cartier</p>

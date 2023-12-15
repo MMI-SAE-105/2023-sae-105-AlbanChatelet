@@ -106,7 +106,7 @@
     </div>
     </div>
 
-    <h4>Le Bell Labs Holmdel Complex est un ancien campus des Laboratoires Bell situé à Holmdel, dans le New Jersey. Conçu par
+    <h4 class="quatre">Le Bell Labs Holmdel Complex est un ancien campus des Laboratoires Bell situé à Holmdel, dans le New Jersey. Conçu par
     l'architecte Eero Saarinen et construit entre 1959 et 1962, il a servi pendant 44 ans pour près de 6 000 ingénieurs.</h4>
 
     <iframe
@@ -114,16 +114,16 @@
         width="375" height="300" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-    <h1>Des travaux portés sur l'informatique</h1>
+    <h1 class="un">Des travaux portés sur l'informatique</h1>
     
 
-    <h4>Son aspect rappelle volontairement celui des premiers circuits électroniques intégrés tandis que le château d'eau à
+    <h4 class="quatre">Son aspect rappelle volontairement celui des premiers circuits électroniques intégrés tandis que le château d'eau à
     l'entrée du campus rapelle l'aspect des premiers transistors. la plus grosse part des travaux qui y ont été menés ont
     porté sur l'informatique.</h4>
 
-    <h1>Sormset Development</h1>
+    <h1 class="un">Sormset Development</h1>
 
-    <h4>Au mois d'août 2013, Somerset Development a racheté le bâtiment pour en faire un complexe mixte de commerces et de
+    <h4 class="quatre">Au mois d'août 2013, Somerset Development a racheté le bâtiment pour en faire un complexe mixte de commerces et de
     logements, mais les perspectives se sont assombries avec la prise de conscience des rigidités introduites par Saarinen
     dans l'utilisation des locaux, et le délabrement progressif des bureaux.</h4>
 
@@ -131,7 +131,7 @@
             imageAffiche: 'public/img/int.webp'
         }">
     
-        <h1>Logo de Somerset Development</h1>
+        
     
         <div x-data="{
             imageAffiche: ''
@@ -144,20 +144,29 @@
                 </figure>
             </div>
     
-            <img src="public/img/som.webp" alt="" style="width: 100px;" @click="imageAffiche = 'public/img/som.webp'">
+            
             
         </div>
 
 
-    <footer class="footer">
-        <a href="/">
-            <img class="footer__logo" src="public/icons/Logo.svg" alt="Logo" />
-        </a>
-        <p class="footer__text">
-        <h2>Contact</h2>
-        <h3>Alban Chatelet - Groupe C1</h3>
-        <h4>Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI Montbéliard</h4>
-        </p>
-        <p class="footer__copy">&copy; Fondation Cartier</p>
+    <footer class="footer bande_bleue_footer">
+    
+        <section class="">
+            <div class="ligne_blanche1"></div>
+    
+            <a class="contact" href="contact.html">
+                <h2 class="position_contact">Contact</h2>
+            </a>
+            <h3 class="name">Alban Chatelet - Groupe C1</h3>
+            <div class="ligne_blanche2"></div>
+        </section>
+    
+        <div>
+            <h4 class="pedagogie">Ce site est un projet réalisé dans le cadre d’un exercice pédagogique au département MMI
+                Montbéliard</h4>
+            </p>
+            <p class="pedagogie cartier">&copy; Fondation Cartier</p>
+            <div class="logo position_logo"><img src="public/icons/logo_blanc.svg" alt=""></div>
+        </div>
     </footer>
 </body>
